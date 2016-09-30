@@ -5,12 +5,8 @@ You can also register your sitemap event listeners by creating service classes i
 tag in your `Resources/config/services.xml`. This way the services will be lazy-loaded by Symfony's event dispatcher, only when the event is dispatched:
 
 ```xml
-<parameters>
-    <parameter key="acme_demo.sitemap.listener.class">Acme\DemoBundle\EventListener\SitemapListener</parameter>
-</parameters>
-
 <services>
-    <service id="my.sitemap.listener" class="%acme_demo.sitemap.listener.class%">
+    <service id="my.sitemap.listener" class="Acme\DemoBundle\EventListener\SitemapListener">
         <tag name="presta.sitemap.listener" />
         <argument type="service" id="router"/>
     </service>
@@ -20,12 +16,9 @@ tag in your `Resources/config/services.xml`. This way the services will be lazy-
 or in yaml:
 
 ```yaml
-parameters:
-    acme_demo.sitemap.listener.class: Acme\DemoBundle\EventListener\SitemapListener
-
 services:
     my.sitemap.listener:
-        class: "%acme_demo.sitemap.listener.class%"
+        class: "Acme\DemoBundle\EventListener\SitemapListener"
         arguments: ["@router"]
         tags: [{name: "presta.sitemap.listener"}]
 ```
@@ -55,7 +48,7 @@ class SitemapListener implements SitemapListenerInterface
     public function populateSitemap(SitemapPopulateEvent $event)
     {
         $section = $event->getSection();
-        if (is_null($section) || $section == 'default') {
+        if (null === $section || 'default' === $section) {
             //get absolute homepage url
             $url = $this->router->generate('homepage', array(), UrlGeneratorInterface::ABSOLUTE_URL);
 

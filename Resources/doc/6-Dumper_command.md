@@ -33,7 +33,8 @@ and update corresponding part of sitemap index file, leaving other sitemap refer
 To make use of these feature your Event listeners should check `$event->getSection()` in the following way:
 
 ```php
-if (is_null($event->getSection()) || $event->getSection() == 'mysection') {
+<?php
+if (null === $event->getSection() || 'mysection' === $event->getSection()) {
     $event->getUrlContainer()->addUrl(
         new UrlConcrete(
             $url,

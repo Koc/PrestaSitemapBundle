@@ -8,20 +8,20 @@
 [![PrestaSitemapBundle on Knpbundles](http://knpbundles.com/prestaconcept/PrestaSitemapBundle/badge)](http://knpbundles.com/prestaconcept/PrestaSitemapBundle)
 
 
-PrestaSitemapBundle is a Symfony2 xml sitemap generator.
+PrestaSitemapBundle is a Symfony xml sitemap generator.
 
 
-:speech_balloon: If you want to have some informations about the projet progression you can register to our [google group][10]
+:speech_balloon: If you want to have some information about the project progression you can register to our [google group][9]
 
 
 ## Overview
 
-For a ready to use demonstration of PrestaSitemap you should check the [prestacms-sandox available on github][11].
+For a ready to use demonstration of PrestaSitemap you should check the [prestacms-sandox available on github][10].
 
 Sandbox is also deployed for a live demonstration :
 
--   [Sitemap index][12]
--   [Sitemap section][13]
+-   [Sitemap index][10]
+-   [Sitemap section][11]
 
 ## Requirements
 
@@ -90,7 +90,7 @@ Sandbox is also deployed for a live demonstration :
     </route>
     ```
 
-    For complexe routes, create a [Closure][3] or a [Service][5] dedicated to your sitemap then add your urls :
+    For complex routes, create a [EventListener][5] dedicated to your sitemap then add your urls :
 
     ```php
     use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
@@ -123,13 +123,12 @@ You will find the detailed documentation in the following links :
 
 * [1-Installation.md][1]
 * [2-Configuration.md][2]
-* [3-Usage-Quick_and_dirty.md][3]
-* [4-Usage-Routing_Config.md][4]
-* [5-Usage-Event_Listener.md][5]
-* [6-Url_Decorator.md][6]
-* [7-Dumper_command.md][7]
-* [CHANGELOG.md][8]
-* [CONTRIBUTORS.md][9]
+* [4-Usage-Routing_Config.md][3]
+* [5-Usage-Event_Listener.md][4]
+* [6-Url_Decorator.md][5]
+* [7-Dumper_command.md][6]
+* [CHANGELOG.md][7]
+* [CONTRIBUTORS.md][8]
 
 ## Ask for help ##
 
@@ -152,18 +151,17 @@ Released under the MIT License
 
 [1]: Resources/doc/1-Installation.md
 [2]: Resources/doc/2-Configuration.md
-[3]: Resources/doc/3-Usage-Quick_and_dirty.md
-[4]: Resources/doc/4-Usage-Routing_Config.md
-[5]: Resources/doc/5-Usage-Event_Listener.md
-[6]: Resources/doc/6-Url_Decorator.md
-[7]: Resources/doc/7-Dumper_command.md
-[8]: CHANGELOG.md
-[9]: Resources/doc/CONTRIBUTORS.md
+[3]: Resources/doc/3-Usage-Routing_Config.md
+[4]: Resources/doc/4-Usage-Event_Listener.md
+[5]: Resources/doc/5-Url_Decorator.md
+[6]: Resources/doc/6-Dumper_command.md
+[7]: CHANGELOG.md
+[8]: Resources/doc/CONTRIBUTORS.md
 
-[10]: https://groups.google.com/forum/?hl=fr&fromgroups#!forum/prestacms-devs
-[11]: https://github.com/prestaconcept/prestacms-sandbox
-[12]: http://sandbox.prestacms.fr/sitemap.xml
-[13]: http://sandbox.prestacms.fr/sitemap.sandbox.xml
+[9]: https://groups.google.com/forum/?hl=fr&fromgroups#!forum/prestacms-devs
+[10]: https://github.com/prestaconcept/prestacms-sandbox
+[11]: http://sandbox.prestacms.fr/sitemap.xml
+[12]: http://sandbox.prestacms.fr/sitemap.sandbox.xml
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/prestaconcept/prestasitemapbundle/trend.png)](https://bitdeli.com/free "Bitdeli Badge")

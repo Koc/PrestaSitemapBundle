@@ -31,7 +31,7 @@ PrestaSitemapBundle provides those decorators (but you can use your own) :
  * GoogleNewsUrlDecorator
  * GoogleVideoUrlDecorator
 
-## Deeper informations
+## Deeper information
 
 As you can see the bundle takes care about limit constraints and automatically 
 divide sections for example because this is allowed.
@@ -43,6 +43,7 @@ So you yo have to set the limit yourself or safely try to add elements to your
 sitemap :
 
 ```php
+<?php
 use Presta\SitemapBundle\Sitemap\Url;
 
 $url = new Url\GoogleImageUrlDecorator(new Url\UrlConcrete('http://acme.com/'));
@@ -66,6 +67,7 @@ For example are the google finance stock_tickers related to a news limited to 5.
 The decorator will throw an exception if a limit is passed:
 
 ```php
+<?php
 use Presta\SitemapBundle\Sitemap\Url;
 use Presta\SitemapBundle\Exception;
 
